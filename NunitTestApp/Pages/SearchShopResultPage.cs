@@ -16,10 +16,6 @@ namespace NunitTestApp.Pages
         [FindsBy(How = How.XPath, Using = "//div[@class='h']/div")]
         private IList<IWebElement> goods;
 
-        public SearchShopResultPage():base()
-        {
-        }
-
         public IList<IWebElement> Goods
         {
             get

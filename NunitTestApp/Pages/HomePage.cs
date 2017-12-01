@@ -11,8 +11,6 @@ namespace NunitTestApp.Pages
 {
     public class HomePage:BasePage
     {
-      //  IWebDriver driver;
-
         [FindsBy(How = How.Id, Using = "search_from_str")]
         private IWebElement searchInput;
 
@@ -21,8 +19,6 @@ namespace NunitTestApp.Pages
 
         [FindsBy(How = How.Name, Using = "search")]
         private IWebElement searchBtn;
-
-        public HomePage():base(){ }
 
         public HomePage SetSearchShops()
         {
