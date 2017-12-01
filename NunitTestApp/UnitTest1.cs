@@ -20,7 +20,7 @@ namespace NunitTestApp
         public void SetUp()
         {
             //driver = new InternetExplorerDriver();
-            Browser.Init(DriverType.IE);
+            Browser.Init(DriverType.Chrome);
             driver = Browser.Driver;
             driver.Manage().Window.Maximize();
             //Base URL

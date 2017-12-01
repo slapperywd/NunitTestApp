@@ -27,7 +27,9 @@ namespace NunitTestApp.Utils
                     break;
                 case DriverType.IE:
                     InternetExplorerOptions ieOptions = new InternetExplorerOptions();
-                    ieOptions.InitialBrowserUrl = @"https://github.com/EugeneFaceControl?tab=repositories";
+                   // ieOptions.IntroduceInstabilityByIgnoringProtectedModeSettings = true;
+                    ieOptions.InitialBrowserUrl = @"https://www.tut.by/";
+                   // ieOptions.
                    // ieOptions.IgnoreZoomLevel = true;
                     _driver = new InternetExplorerDriver(ieOptions);
                     break;

@@ -19,3 +19,7 @@ C:\Users\User\Source\Repos\NunitTestApp\NunitTestApp\bin\Debug\WebDriver.Support
 C:\Users\User\Source\Repos\NunitTestApp\NunitTestApp\bin\Debug\log4net.dll
 C:\Users\User\Source\Repos\NunitTestApp\NunitTestApp\bin\Debug\log4net.xml
 C:\Users\User\Source\Repos\NunitTestApp\NunitTestApp\obj\Debug\NunitTestApp.csprojResolveAssemblyReference.cache
+C:\Users\User\Source\Repos\NunitTestApp\NunitTestApp\bin\Debug\NunitTestApp.dll.config
+C:\Users\User\Source\Repos\NunitTestApp\NunitTestApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\User\Source\Repos\NunitTestApp\NunitTestApp\bin\Debug\TechTalk.SpecFlow.dll
+C:\Users\User\Source\Repos\NunitTestApp\NunitTestApp\bin\Debug\Newtonsoft.Json.xml

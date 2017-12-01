@@ -11,19 +11,13 @@ using System.Threading.Tasks;
 
 namespace NunitTestApp.Pages
 {
-    public class SearchShopResultPage
+    public class SearchShopResultPage:BasePage
     {
-        IWebDriver driver;
-        WebDriverWait wait;
-
         [FindsBy(How = How.XPath, Using = "//div[@class='h']/div")]
         private IList<IWebElement> goods;
 
-        public SearchShopResultPage()
+        public SearchShopResultPage():base()
         {
-            this.driver = Browser.Driver;
-            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(15));
-            PageFactory.InitElements(driver, this);
         }
 
         public IList<IWebElement> Goods

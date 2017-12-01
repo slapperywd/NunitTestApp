@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace NunitTestApp.Pages
 {
-    public class HomePage
+    public class HomePage:BasePage
     {
-        IWebDriver driver;
+      //  IWebDriver driver;
 
         [FindsBy(How = How.Id, Using = "search_from_str")]
         private IWebElement searchInput;
@@ -22,11 +22,7 @@ namespace NunitTestApp.Pages
         [FindsBy(How = How.Name, Using = "search")]
         private IWebElement searchBtn;
 
-        public HomePage()
-        {
-            this.driver = Browser.Driver;
-            PageFactory.InitElements(driver, this);
-        }
+        public HomePage():base(){ }
 
         public HomePage SetSearchShops()
         {
