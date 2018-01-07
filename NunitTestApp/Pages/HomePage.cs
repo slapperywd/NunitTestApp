@@ -20,6 +20,8 @@ namespace NunitTestApp.Pages
         [FindsBy(How = How.Name, Using = "search")]
         private IWebElement searchBtn;
 
+        private EntryNewsPage enPage = new EntryNewsPage();
+
         public HomePage SetSearchShops()
         {
             searchInput.Click();
@@ -32,6 +34,11 @@ namespace NunitTestApp.Pages
             searchInput.SendKeys(text);
             searchBtn.Click();
             return new T();
+        }
+
+        public void OpenEntryNews()
+        {
+            enPage.Open();
         }
     }
 }

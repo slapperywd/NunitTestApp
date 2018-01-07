@@ -72,6 +72,13 @@ namespace NunitTestApp
             Assert.IsTrue(resultShopPage.Goods.Count > 0);
         }
 
+        [Test]
+        public void EntryNews()
+        {
+            new HomePage()
+                .OpenEntryNews();
+        }
+
         [TearDown]
         public void TearDown()
         {
