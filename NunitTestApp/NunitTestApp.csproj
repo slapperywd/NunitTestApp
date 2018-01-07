@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MailRuTests.cs" />
+    <Compile Include="Pages\EntryNewsPage.cs" />
     <Compile Include="Pages\MailRu\LettersPage.cs" />
     <Compile Include="Pages\MailRu\MenuItems\Contacts.cs" />
     <Compile Include="Pages\MailRu\MenuItems\InboxMails.cs" />

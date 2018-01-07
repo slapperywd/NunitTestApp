@@ -9,6 +9,7 @@ using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
 using NunitTestApp.Pages;
 using System.Threading;
+using OpenQA.Selenium.Interactions;
 
 namespace NunitTestApp
 {
@@ -31,13 +32,22 @@ namespace NunitTestApp
         [Test]
         public void SelectionTextTest()
         {
-            driver.FindElement(By.ClassName("eeeeassa"));
             driver.FindElement(By.ClassName("entry-anounce")).HiglightElementJS();
             driver.FindElement(By.XPath("//div[@class='b-newsfeed']/div")).HiglightElementJS();
-            Thread.Sleep(5000);
             driver.FindElement(By.CssSelector(".entry-head a")).ClickElementJS();
-            driver.FindElement(By.CssSelector(".b-article h2")).ScrollIntoViewJS();
-            driver.FindElement(By.CssSelector(".b-article p:nth-child(4)")).HiglightElementJS();
+
+            IWebElement textToSelect = driver.FindElement(By.CssSelector("#article_body p"));
+           // textToSelect.HiglightElementJS();
+            Actions actions = new Actions(driver);
+            actions.MoveToElement(textToSelect, 50, 50)
+                .ClickAndHold()
+                .MoveByOffset(100, 100)
+                .Release()
+                .Perform();
+            Thread.Sleep(1000);
+            
+
+
             //driver.FindElement(By.XPath("//ul[@class='hottags__list']/li//a[text()='Беларусь-Украина']")).Higlight(driver);
 
             //driver.FindElement(By.XPath("//ul[@class='hottags__list']/li//a[contains(., 'Беларусь')]")).Higlight(driver);
