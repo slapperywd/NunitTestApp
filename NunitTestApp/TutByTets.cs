@@ -8,11 +8,12 @@ using NUnit.Framework.Interfaces;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
 using NunitTestApp.Pages;
+using System.Threading;
 
 namespace NunitTestApp
 {
     [TestFixture]
-    public class UnitTest1
+    public class TutByTets
     {
         IWebDriver driver;
 
@@ -28,12 +29,15 @@ namespace NunitTestApp
         }
 
         [Test]
-        [Ignore("")]
-        public void TestXPath()
+        public void SelectionTextTest()
         {
-       
-            driver.FindElement(By.XPath("//div[@class='b-newsfeed']/div")).Higlight(driver);
-
+            driver.FindElement(By.ClassName("eeeeassa"));
+            driver.FindElement(By.ClassName("entry-anounce")).HiglightElementJS();
+            driver.FindElement(By.XPath("//div[@class='b-newsfeed']/div")).HiglightElementJS();
+            Thread.Sleep(5000);
+            driver.FindElement(By.CssSelector(".entry-head a")).ClickElementJS();
+            driver.FindElement(By.CssSelector(".b-article h2")).ScrollIntoViewJS();
+            driver.FindElement(By.CssSelector(".b-article p:nth-child(4)")).HiglightElementJS();
             //driver.FindElement(By.XPath("//ul[@class='hottags__list']/li//a[text()='Беларусь-Украина']")).Higlight(driver);
 
             //driver.FindElement(By.XPath("//ul[@class='hottags__list']/li//a[contains(., 'Беларусь')]")).Higlight(driver);
@@ -73,10 +77,12 @@ namespace NunitTestApp
         {
             if (TestContext.CurrentContext.Result.Outcome.Status != TestStatus.Passed)
             {
+                string filePath = $@"D:\Screenshots\{TestContext.CurrentContext.Test.Name}.jpg";
                 var screenshot = ((ITakesScreenshot)driver).GetScreenshot();
-                screenshot.SaveAsFile($@"D:\Screenshots\{TestContext.CurrentContext.Test.Name}.jpg", ScreenshotImageFormat.Jpeg);
+                screenshot.SaveAsFile(filePath, ScreenshotImageFormat.Jpeg);
+                TestContext.AddTestAttachment(filePath);
             }
-            driver.Quit();
+            //driver.Quit();
         }
 
     }

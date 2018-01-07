@@ -61,6 +61,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MailRuTests.cs" />
+    <Compile Include="Pages\MailRu\LettersPage.cs" />
+    <Compile Include="Pages\MailRu\MenuItems\Contacts.cs" />
+    <Compile Include="Pages\MailRu\MenuItems\InboxMails.cs" />
+    <Compile Include="Pages\MailRu\MenuItems\SentMails.cs" />
+    <Compile Include="Pages\MailRu\Menu\LeftMenu.cs" />
+    <Compile Include="Pages\MailRu\MailAccountPage.cs" />
+    <Compile Include="Pages\MailRu\MailHomePage.cs" />
+    <Compile Include="Pages\MailRu\Menu\TopMenu.cs" />
     <Compile Include="TestBdd.cs" />
     <Compile Include="Pages\BasePage.cs" />
     <Compile Include="Pages\HomePage.cs" />
@@ -71,11 +80,12 @@
       <DependentUpon>SpecFlowFeature1.feature</DependentUpon>
     </Compile>
     <Compile Include="SpecFlowFeature1Steps.cs" />
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="TutByTets.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\Browser.cs" />
     <Compile Include="Utils\DriverType.cs" />
-    <Compile Include="Utils\SeleniumUtils.cs" />
+    <Compile Include="Utils\JsUtils.cs" />
+    <Compile Include="Utils\Wait.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -85,6 +95,7 @@
       <LastGenOutput>SpecFlowFeature1.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
